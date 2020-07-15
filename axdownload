@@ -1,0 +1,152 @@
+#!/bin/bash
+
+# @name         axdownload
+
+# @author       Dinn Eferet
+
+# @description  A tool for faster file downloads, with an added perk. Uses Axel,
+#               a download accelerator tool, to perform downloads. Saves the
+#               download command as an executable Bash script in case downloads
+#               are interrupted/paused, so they can be run some other time.
+
+
+
+download () {
+  # create an array populated with chunks of the download link
+  split_download_link=($(echo "$1" | tr '/' '\n'))
+
+  # use the last chunk of the download link (the file name) to name script
+  touch "${split_download_link[-1]}_dowload.sh"
+
+  # assign script name to variable
+  download_script="${split_download_link[-1]}_dowload.sh"
+
+  # append commands to script and make executable
+  echo "#!/bin/bash" > $download_script
+  echo "axel $1" >> $download_script
+  chmod 777 $download_script
+
+  echo "---------------------------------------------------------------------"
+  read -p "Download file now? (y/n) " download_now
+  echo "---------------------------------------------------------------------"
+
+  sleep 1
+
+  if [[ "$download_now" = "y" ]]
+  then
+    # start download
+  	axel $1
+
+    echo "---------------------------------------------------------------------"
+    echo "An executable script for your download was automatically created in"
+    echo "this folder. If your download was successful, you can delete it."
+    echo "Otherwise you can run it whenever you're ready to download your file"
+    echo "by opening up this folder in your Terminal and typing this:"
+    echo ""
+    echo "'./$download_script'"
+    echo "---------------------------------------------------------------------"
+  elif [[ "$download_now" = "n" ]]
+  then
+    echo "---------------------------------------------------------------------"
+    echo "An executable script for your download was automatically created in"
+    echo "this folder. To run it whenever you're ready to download your file,"
+    echo "open up this folder in your Terminal and type this:"
+    echo ""
+    echo "'./$download_script'"
+    echo "---------------------------------------------------------------------"
+
+    exit 0
+  else
+    echo "---------------------------------------------------------------------"
+  	echo "Invalid input given! Can't continue."
+    echo "---------------------------------------------------------------------"
+
+    sleep 1
+
+    echo "---------------------------------------------------------------------"
+    echo "An executable script for your download was automatically created in"
+    echo "this folder. To run it whenever you're ready to download your file,"
+    echo "open up this folder in your Terminal and type this:"
+    echo ""
+    echo "'./$download_script'"
+    echo "---------------------------------------------------------------------"
+
+    exit 0
+  fi
+}
+
+#fancy
+clear
+
+#fancy
+echo "---------------------------------------------------------------------"
+echo "axdownload"
+echo "---------------------------------------------------------------------"
+echo "Author: Dinn Eferet"
+echo "Repo: https://github.com/DinnEferet/linux-life-hacks"
+echo "---------------------------------------------------------------------"
+echo "Current User: "
+echo "$(echo ${USER})"
+echo ""
+echo "Current Folder: "
+echo "$(echo ${PWD})"
+echo "---------------------------------------------------------------------"
+echo "This tool requires that axel (a download accelerator tool) be"
+echo "installed on your machine. If you do not have axel installed,"
+echo "turn on your internet, and axdownload will attempt to install"
+echo "it from its apt repository in the background."
+echo "---------------------------------------------------------------------"
+
+echo ""
+
+#fancy
+read -p "Press ENTER to continue, or CTRL-C to exit. "
+
+echo ""
+
+echo "---------------------------------------------------------------------"
+echo "Paste your download link below, then press ENTER."
+echo "---------------------------------------------------------------------"
+read link
+echo "---------------------------------------------------------------------"
+
+
+# check if user has 'axel' installed
+if command -v axel > /dev/null 2>&1 # '> /dev/null 2>&1' hides command output
+then
+  # call download function
+	download "$link"
+else
+  echo "---------------------------------------------------------------------"
+  echo "Looks like you don't have axel installed!"
+  echo "---------------------------------------------------------------------"
+
+  sleep 1
+
+  echo "Attempting to install axel (may require your sudo password)..."
+
+  sleep 1
+
+  # install Axel
+  sudo apt install axel -y > /dev/null 2>&1
+
+  # if instllation was successful
+  if command -v axel > /dev/null 2>&1
+  then
+    echo "---------------------------------------------------------------------"
+    echo "axel was installed successfully! Continuing..."
+    echo "---------------------------------------------------------------------"
+
+    sleep 1
+
+    download "$link"
+	else
+    echo "---------------------------------------------------------------------"
+    echo "There was a problem installing axel. This tool can't work without"
+    echo "it. Please try installing axel yourself (using 'sudo apt install"
+    echo "axel -y'), then run axdownload again."
+    echo "---------------------------------------------------------------------"
+
+    exit 0
+  fi
+fi
