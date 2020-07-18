@@ -127,6 +127,8 @@ else
 
   sleep 1
 
+  echo "---------------------------------------------------------------------"
+
   # install Axel
   sudo apt install axel -y > /dev/null 2>&1
 
