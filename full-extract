@@ -207,6 +207,8 @@ else
 
   sleep 1
 
+	echo "---------------------------------------------------------------------"
+
   sudo apt install dtrx -y > /dev/null 2>&1
 
   if command -v dtrx > /dev/null 2>&1
