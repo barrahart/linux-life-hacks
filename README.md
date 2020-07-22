@@ -1,6 +1,6 @@
 # linux-life-hacks
 
-Some handy tools, written in Bash, for making your Linux life a bit easier. Each script, after installation steps are followed, can be called by name as a command in your Terminal (Debian-based distros only, for now).
+Some handy bash scripts for making your Linux life a bit easier. Each script, after installation steps are followed, can be called by name as a command in your Terminal (Debian-based distros only, for now).
 
 ### Installation Guide:
 * Download script from Code section.
@@ -10,7 +10,7 @@ Some handy tools, written in Bash, for making your Linux life a bit easier. Each
 * Change script to executable using ```sudo chmod 777 <name of script>```.
 * Restart Terminal. Script can now be called as a command. Please refer to the comments in the source code of the script to understand what it does.
 
-_Still working on publishing some of these tools as official Linux packages. Feel free to fork this repo and tweak any of the tools to your needs, but I'd appreciate it if the original repo were acknowledged. Thanks!_ 
+_Still working on publishing some of these as official Linux packages. Feel free to fork this repo and tweak any of the tools to your needs, but I'd appreciate it if the original repo were acknowledged. Thanks!_
 
 ### Screenshots
 
