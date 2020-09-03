@@ -10,7 +10,7 @@ Some handy bash scripts for making your Linux life a bit easier. Each script, af
 * Change script to executable using ```sudo chmod 777 <name of script>```.
 * Restart Terminal. Script can now be called as a command. Please refer to the comments in the source code of the script to understand what it does.
 
-_Still working on publishing some of these as official Linux packages. Feel free to fork this repo and tweak any of the tools to your needs, but I'd appreciate it if the original repo were acknowledged. Thanks!_
+_Still working on publishing some of these as official Linux packages._
 
 ### Screenshots
 

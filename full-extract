@@ -8,9 +8,8 @@
 #               extracts every archive file in the current working directory
 #               (including files in subfolders), and redundantly moves every
 #               file it finds in the directory (including files in subfolders)
-#               to the directory. It was inspired by my frustration with having
-#               to repeatedly extract files out of archives I downloaded in
-#               bulk. Use with care! I repeat, use with care!!!
+#               to the directory. Inspired by frustration. Use with care! I
+#               repeat, use with care!!!
 
 
 # fancy
@@ -32,7 +31,9 @@ echo "---------------------------------------------------------------------"
 echo "This tool requires that dtrx (a universal file extraction tool) be"
 echo "installed on your machine. If you do not have dtrx installed,"
 echo "turn on your internet, and full-extract will attempt to install"
-echo "it from its apt repository in the background."
+echo "it from its apt repository in the background (can only work on"
+echo "Ubuntu versions older than 20.x for now; will be patched as soon as"
+echo "Ubuntu 20.x supports dtrx, or a similar tool)."
 echo "---------------------------------------------------------------------"
 
 # fancy
@@ -51,7 +52,7 @@ echo "subfolders), and redundantly move all the files it finds in this"
 echo "folder (including files in subfolders) to this folder! If you do"
 echo "not want this to happen, or if this folder is anywhere near your"
 echo "/root or /home folder, PRESS CTRL-C RIGHT NOW and move your"
-echo "archive files to a safer folder (e.g. ~/Desktop/my_archives)!"
+echo "archive files to a safer folder (e.g. ~/Desktop/my_safer_folder)!"
 echo "Then open that folder in your Terminal and run full-extract again."
 
 echo ""
@@ -163,8 +164,8 @@ fi
 
 # check if user wants to get rid of other files
 echo "---------------------------------------------------------------------"
-echo "Are there any other file types in this folder you'd like to"
-read -p "delete after extraction? (y/n): " delete_others
+echo "Are there any files in this folder you'd like to delete after"
+read -p "extraction? (y/n): " delete_others
 echo "---------------------------------------------------------------------"
 
 if [ $delete_others = "y" ]
@@ -223,8 +224,8 @@ else
 	else
     echo "---------------------------------------------------------------------"
     echo "There was a problem installing dtrx. This tool can't work without"
-		echo "it. Please try installing dtrx yourself (using 'sudo apt install"
-    echo "dtrx -y'), then run full-extract again."
+		echo "it. Please try installing dtrx yourself using 'sudo apt install"
+    echo "dtrx -y' (Ubuntu 19.x or older, for now), then run this tool again."
     echo "---------------------------------------------------------------------"
 
     exit 0
