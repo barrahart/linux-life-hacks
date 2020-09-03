@@ -14,4 +14,4 @@ _Still working on publishing some of these as official Linux packages._
 
 ### Screenshots
 
-![linux-life-hacks](https://user-images.githubusercontent.com/24297147/70738975-1bbbcd00-1d16-11ea-9df1-9b293f33fb32.png "Where the hacks are meant to be at")
+![linux-life-hacks-location](https://user-images.githubusercontent.com/24297147/92165866-a063f380-ee2f-11ea-9ea8-4137c2447350.png "Where the hacks are meant to be at")
