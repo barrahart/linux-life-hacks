@@ -2,7 +2,7 @@
 
 # @name         mine-dirs
 
-# @author       Dinn Eferet
+# @author       Barra Hart
 
 # @description  A handy but potentially VERY DANGEROUS tool, which redundantly
 #               moves every file it finds in the current directory (including
@@ -17,8 +17,8 @@ clear
 echo "---------------------------------------------------------------------"
 echo "mine-dirs"
 echo "---------------------------------------------------------------------"
-echo "Author: Dinn Eferet"
-echo "Repo: https://github.com/DinnEferet/linux-life-hacks"
+echo "Author: Barra Hart"
+echo "Repo: https://github.com/barrahart/linux-life-hacks"
 echo "---------------------------------------------------------------------"
 echo "Current User: "
 echo "$(echo ${USER})"

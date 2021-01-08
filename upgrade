@@ -2,7 +2,7 @@
 
 # @name         upgrade
 
-# @author       Dinn Eferet
+# @author       Barra Hart
 
 # @description  A Bash script that performs a full clean upgrade on your Linux
 #               machine.
@@ -18,8 +18,8 @@ hname="$(hostname)"
 echo "---------------------------------------------------------------------"
 echo "upgrade"
 echo "---------------------------------------------------------------------"
-echo "Author: Dinn Eferet"
-echo "Repo: https://github.com/DinnEferet/linux-life-hacks"
+echo "Author: Barra Hart"
+echo "Repo: https://github.com/barrahart/linux-life-hacks"
 echo "---------------------------------------------------------------------"
 echo "Current User: "
 echo "$(echo ${USER})"
