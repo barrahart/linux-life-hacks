@@ -1,16 +1,27 @@
 # linux-life-hacks
 
-Some handy bash scripts for making your Linux life a bit easier. Each script, after installation steps are followed, can be called by name as a command in your Terminal (Debian-based distros only, for now).
+Some handy bash scripts for making your Linux life easier. Debian-based distros only, for now.
 
-### Installation Guide:
-* Download script from Code section.
-* Open Terminal.
-* Save script in ```/usr/bin``` folder. You can use the ```mv``` command (with the appropriate privileges) or any other method you like.
-* Change permissions on script using ```sudo chown <your user name>:<your group name> <name of script>```.
-* Change script to executable using ```sudo chmod 777 <name of script>```.
-* Restart Terminal. Script can now be called as a command. Please refer to the comments in the source code of the script to understand what it does.
 
-_Still working on publishing some of these as official Linux packages._
+### Easy Install
+* Download/clone repository.
+* Open repository folder in Terminal.
+* Run ```./install.sh```
+* Hack can now be run as a system command.
+
+### Easy Uninstall
+* Open repository folder in Terminal.
+* Run ```./uninstall.sh```
+
+### Manual Install
+* Download hack from ```hacks``` folder.
+* Open download folder in Terminal.
+* Save hack in ```/usr/bin```. Use ```mv``` with appropriate privileges, or any other method you like.
+* Change permissions on hack using ```sudo chown root:root [name of script]```.
+* Make hack executable using ```sudo chmod 777 [name of script]```.
+* Hack can now be run as a system command.
+
+_Official packages coming soon._
 
 ### Screenshots
 
