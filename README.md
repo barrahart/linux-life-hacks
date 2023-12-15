@@ -25,4 +25,4 @@ _Official packages coming soon._
 
 ### Screenshots
 
-![linux-life-hacks-location](https://user-images.githubusercontent.com/24297147/92165866-a063f380-ee2f-11ea-9ea8-4137c2447350.png "Where the hacks are meant to be at")
+![linux-life-hacks-location](https://github.com/barrahart/linux-life-hacks/blob/master/assets/screenshots/linux-life-hacks.png "Where the hacks are at")
