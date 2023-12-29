@@ -24,7 +24,7 @@ echo "---------------------------------------------------------------------"
 echo ""
 
 #fancy
-read -p ":::::::::: Press ENTER to continue, or CTRL-C to exit ::::::::::::"
+read -p "::::::::::: Press ENTER to continue, or CTRL-C to exit ::::::::::::::"
 echo ""
 
 
