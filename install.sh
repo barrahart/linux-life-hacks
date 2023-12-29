@@ -20,12 +20,12 @@ clear
 
 # fancy
 echo "---------------------------------------------------------------------"
-echo ":::::::::::::::::::::Linux Life Hacks Installer::::::::::::::::::::::"
+echo ":::::::::::::::: Linux Life Hacks Installer 1.0.0 :::::::::::::::::::"
 echo "---------------------------------------------------------------------"
 echo ""
 
 #fancy
-read -p ":::::::::::::Press ENTER to continue, or CTRL-C to exit::::::::::::::"
+read -p ":::::::::: Press ENTER to continue, or CTRL-C to exit ::::::::::::"
 echo ""
 
 
