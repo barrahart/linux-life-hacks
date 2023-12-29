@@ -18,13 +18,11 @@ clear
 
 # fancy
 echo "---------------------------------------------------------------------"
-echo "::::::::::::::::::::::::::::::Upgrade::::::::::::::::::::::::::::::::"
+echo ":::::::::::::::::::::::: Upgrade 1.0.0 ::::::::::::::::::::::::::::::"
 echo "---------------------------------------------------------------------"
 echo ""
-echo "---------------------------------------------------------------------"
-echo ""
-echo "Author: Barra Hart"
-echo "Repo: https://github.com/barrahart/linux-life-hacks"
+echo "Copyright 2023 Barra Hart"
+echo "https://github.com/barrahart/linux-life-hacks"
 echo ""
 echo "Full system upgrade for $(echo $(hostname))"
 echo ""

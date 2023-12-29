@@ -24,13 +24,11 @@ clear
 
 # fancy
 echo "---------------------------------------------------------------------"
-echo ":::::::::::::::::::::::::::Full Extract::::::::::::::::::::::::::::::"
+echo ":::::::::::::::::::::: Full Extract 1.0.0 :::::::::::::::::::::::::::"
 echo "---------------------------------------------------------------------"
 echo ""
-echo "---------------------------------------------------------------------"
-echo ""
-echo "Author: Barra Hart"
-echo "Repo: https://github.com/barrahart/linux-life-hacks"
+echo "Copyright 2023 Barra Hart"
+echo "https://github.com/barrahart/linux-life-hacks"
 echo ""
 echo "Current Folder:"
 echo "$(echo ${PWD})"

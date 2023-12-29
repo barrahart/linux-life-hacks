@@ -82,13 +82,11 @@ clear
 
 #fancy
 echo "---------------------------------------------------------------------"
-echo "::::::::::::::::::::::::::::Axdownload:::::::::::::::::::::::::::::::"
+echo ":::::::::::::::::::::::: Axdownload 1.0.0 :::::::::::::::::::::::::::"
 echo "---------------------------------------------------------------------"
 echo ""
-echo "---------------------------------------------------------------------"
-echo ""
-echo "Author: Barra Hart"
-echo "Repo: https://github.com/barrahart/linux-life-hacks"
+echo "Copyright 2023 Barra Hart"
+echo "https://github.com/barrahart/linux-life-hacks"
 echo ""
 echo "This hack requires that axel (a download accelerator tool) be"
 echo "installed on your machine. If you do not have axel installed,"
